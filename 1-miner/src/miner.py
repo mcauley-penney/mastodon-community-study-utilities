@@ -78,7 +78,7 @@ def __sleep_miner():
 def mine_api(instance, cfg, max_id, num_posts):
     all_statuses = []
 
-    while True:
+    while num_posts < cfg["max_posts"]:
         try:
             tag = cfg["tag"]
             results = instance.search(q=f"{tag}", result_type="statuses", max_id=max_id)
@@ -86,10 +86,11 @@ def mine_api(instance, cfg, max_id, num_posts):
             statuses = results.get("statuses", [])
             if not statuses:
                 print(f"No more statuses found. Terminating mining for {tag}.")
-                break
+                break  # Break the loop if no more statuses are found
 
             all_statuses.extend(statuses)
 
+            # Update min_id to the ID of the last status in this batch
             max_id = statuses[-1]["id"]
             num_posts += len(statuses)
 

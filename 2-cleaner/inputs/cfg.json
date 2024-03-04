@@ -1,0 +1,33 @@
+{
+  "input_path": "",
+  "output_path": "",
+  "keys": [
+    "id",
+    "created_at",
+    "uri",
+    "url",
+    "content",
+    "tags",
+    "language"
+  ],
+  "keywords": [
+    "learn",
+    "teach",
+    "class",
+    "study",
+    "tutor",
+    "quiz",
+    "exam",
+    "homework",
+    "lesson",
+    "educat",
+    "school",
+    "university",
+    "college",
+    "student",
+    "instructor",
+    "teacher",
+    "cheat",
+    "tutor"
+  ]
+}
